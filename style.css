@@ -39,8 +39,7 @@ body::before {
       50% 50% / var(--size) var(--size),
     linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
       var(--size) var(--size);
-  -webkit-mask: linear-gradient(-15deg, transparent 30%, white);
-          mask: linear-gradient(-15deg, transparent 30%, white);
+  mask: linear-gradient(-15deg, transparent 30%, white);
   top: 0;
   transform-style: flat;
   pointer-events: none;
@@ -89,8 +88,7 @@ nav {
   top: 0;
   padding: 0.25rem;
   width: 100%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: 20;
 }
 
@@ -273,8 +271,7 @@ h1 {
   position: absolute;
   inset: 0;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 
@@ -462,21 +459,15 @@ h1 {
   }
 
   .card {
-    -webkit-animation: grow both linear;
-            animation: grow both linear;
+    animation: grow both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
 
   .card__avatar img {
-    -webkit-animation: fade-in both linear;
-            animation: fade-in both linear;
+    animation: fade-in both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
-  }
-
-  @-webkit-keyframes fade-in {
-    0%, 50% { opacity: 0; }
   }
 
   @keyframes fade-in {
@@ -484,15 +475,13 @@ h1 {
   }
 
   .password svg {
-    -webkit-animation: fade-in both linear;
-            animation: fade-in both linear;
+    animation: fade-in both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
 
   .card__content {
-    -webkit-animation: slide both linear;
-            animation: slide both linear;
+    animation: slide both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
@@ -501,15 +490,13 @@ h1 {
   .card--four .card__avatar {
     --s: 2;
     transform-origin: 0 50%;
-    -webkit-animation: morph both linear;
-            animation: morph both linear;
+    animation: morph both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
 
   .card--two .card__avatar {
-    -webkit-animation: shrink both linear;
-            animation: shrink both linear;
+    animation: shrink both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
@@ -517,39 +504,28 @@ h1 {
   .card--two .card__column:last-of-type,
   .card--three .card__column:last-of-type,
   .card--five .card__column:last-of-type {
-    -webkit-animation: slide both linear;
-            animation: slide both linear;
+    animation: slide both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
 
   .card--six .card__column:last-of-type .card__company {
-    -webkit-animation: cta-morph both linear, color-in both linear;
-            animation: cta-morph both linear, color-in both linear;
+    animation: cta-morph both linear, color-in both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
 
   .card--five .card__dummy,
   .card--six .card__dummy {
-    -webkit-animation: expand both linear;
-            animation: expand both linear;
+    animation: expand both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
   }
 
   .cta {
-    -webkit-animation: morph both linear;
-            animation: morph both linear;
+    animation: morph both linear;
     animation-timeline: --scroller;
     animation-range: entry 0% exit 0%;
-  }
-
-  @-webkit-keyframes cta-morph {
-    0%, 30% {
-      translate: -1rem 0;
-      width: 120px;
-    }
   }
 
   @keyframes cta-morph {
@@ -558,35 +534,14 @@ h1 {
       width: 120px;
     }
   }
-  @-webkit-keyframes color-in {
-    0%, 50% {
-      background: var(--element);
-    }
-  }
   @keyframes color-in {
     0%, 50% {
       background: var(--element);
     }
   }
-  @-webkit-keyframes expand {
-    0%, 30% {
-      width: var(--w, 26cqi);
-    }
-  }
   @keyframes expand {
     0%, 30% {
       width: var(--w, 26cqi);
-    }
-  }
-  @-webkit-keyframes shrink {
-    0%, 30% {
-      width: calc(var(--w) - 2rem);
-      border-radius: 12px;
-      height: calc(300cqh - 2rem);
-    }
-    85% {
-      height: var(--entity-size);
-      width: var(--entity-size);
     }
   }
   @keyframes shrink {
@@ -598,23 +553,6 @@ h1 {
     85% {
       height: var(--entity-size);
       width: var(--entity-size);
-    }
-  }
-  @-webkit-keyframes grow {
-    0% {
-      translate: var(--x, 0) var(--y, 0);
-      height: var(--h, 100%);
-      rotate: var(--r, 0);
-      width: var(--w, 10cqi);
-    }
-    15% {
-      rotate: var(--r, 0);
-    }
-    30% {
-      rotate: 0deg;
-      height: var(--h, 100%);
-      width: calc(var(--w, 10cqi));
-      translate: 0 var(--y, 0);
     }
   }
   @keyframes grow {
@@ -635,25 +573,9 @@ h1 {
     }
   }
 
-  @-webkit-keyframes morph {
-    0% {
-      scale: var(--s);
-    }
-  }
-
   @keyframes morph {
     0% {
       scale: var(--s);
-    }
-  }
-
-  @-webkit-keyframes slide {
-    0%,
-    30% {
-      translate: 0 -100cqh;
-    }
-    100% {
-      translate: 0 0;
     }
   }
 
@@ -785,8 +707,7 @@ h1 {
 }
 
 .ring--over img {
-  -webkit-clip-path: inset(50% 0 0 0);
-          clip-path: inset(50% 0 0 0);
+  clip-path: inset(50% 0 0 0);
 }
 
 .ring img {
@@ -798,8 +719,7 @@ h1 {
   top: 0;
   left: 50%;
   translate: -50% -50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .bear-link {
